@@ -2,16 +2,16 @@
 
 ## Home Page
 
--   [ ] Increase height to 20% for mobile view (wave)
--   [ ] Increase font of greeting on mobile view
--   [ ] Create navbar
+-   [x] Increase height to 20% for mobile view (wave)
+-   [x] Increase font of greeting on mobile view
+-   [x] Create navbar
 
 ## About Page
 
 -   [x] Anchor to projects page
--   [ ] Floating animation arrow until hover
+-   [x] Floating animation arrow until hover
 
 ## Project Page
 
--   [ ] GradientUnderlineText on each title
--   [ ] Fix orientation of project details
+-   [x] GradientUnderlineText on each title
+-   [x] Fix orientation of project details
