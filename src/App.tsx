@@ -63,7 +63,7 @@ function App() {
 					zIndex: 100,
 					padding: 0,
 					margin: 0,
-					transition: "background 0.2s ease-in-out"
+					transition: "all 0.2s ease-in-out"
 				}}
 				fill={theme.waveFill}
 				paused={false}
@@ -75,10 +75,10 @@ function App() {
 				}}
 			/>
 			{/* About Section */}
-			<AboutSection theme={theme} />
+			<AboutSection theme={theme} themeMode={themeMode} />
 
 			{/* Projects Section */}
-			<ProjectsSection theme={theme} />
+			<ProjectsSection theme={theme} themeMode={themeMode} />
 		</Stack>
 	);
 }

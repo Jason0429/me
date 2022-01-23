@@ -1,24 +1,28 @@
 // Components
 import ProjectCard from "./ProjectCard";
-import GradientUnderlineText from "./GradientUnderlineText";
-// import { BlueUnderline } from "../styles/ProjectsSection.styles";
+// import GradientUnderlineText from "./GradientUnderlineText";
+
+// Styles
+import { GradientText } from "../styles/ProjectsSection.styles";
 
 // Material
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 // Hooks
-// import { useWindowSize } from "../hooks";
+import { useWindowSize } from "../hooks";
 
 // Data
 import { projects } from "../data/projects";
 
-function ProjectsSection({ theme }: { theme: any }) {
+function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }) {
+	const [width] = useWindowSize();
 	return (
 		<Stack
 			id='projects'
 			direction='column'
 			sx={{
-				minHeight: "100vh"
+				minHeight: "100vh",
+				paddingBottom: `${width >= 768 ? "0" : "30vh"}`
 			}}
 		>
 			{/* My Project title */}
@@ -30,7 +34,7 @@ function ProjectsSection({ theme }: { theme: any }) {
 					justifyContent: "center"
 				}}
 			>
-				<GradientUnderlineText
+				{/* <GradientUnderlineText
 					text='My Projects'
 					fontSize={{
 						lg: "3em",
@@ -42,7 +46,34 @@ function ProjectsSection({ theme }: { theme: any }) {
 						fontWeight: 200,
 						color: `${theme.text}`
 					}}
-				/>
+				/> */}
+				{themeMode === "dark" ? (
+					<Typography
+						fontSize={{
+							lg: "3em",
+							md: "2.5em",
+							sm: "2em",
+							xs: "2em"
+						}}
+						sx={{ fontWeight: 100, color: `${theme.text}` }}
+					>
+						My Projects
+					</Typography>
+				) : (
+					<GradientText
+						fontSize={{
+							lg: "3em",
+							md: "2.5em",
+							sm: "2em",
+							xs: "2em"
+						}}
+						sx={{
+							fontWeight: 100
+						}}
+					>
+						My Projects
+					</GradientText>
+				)}
 			</Stack>
 
 			{/* Projects Row */}
@@ -66,7 +97,7 @@ function ProjectsSection({ theme }: { theme: any }) {
 					}}
 				>
 					{projects.map((p, key) => (
-						<ProjectCard project={p} key={key} />
+						<ProjectCard project={p} theme={theme} key={key} />
 					))}
 				</Stack>
 			</Stack>

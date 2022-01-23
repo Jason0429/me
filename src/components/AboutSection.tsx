@@ -1,18 +1,18 @@
 // Components
-// import GradientUnderlineText from "./GradientUnderlineText";
 
 // Material
-import { Stack, Paper, IconButton } from "@mui/material";
+import { Stack, Paper, IconButton, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 // Styles
 import { AboutProfilePic, GradientText } from "../styles/About.styles";
 import { Slide, Fade } from "react-awesome-reveal";
+import "../styles/animations.css";
 
 // Data
 import pfp from "../imgs/pfp.png";
 
-function About({ theme }: { theme: any }) {
+function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 	return (
 		<Stack
 			direction='column'
@@ -51,53 +51,85 @@ function About({ theme }: { theme: any }) {
 
 					{/* Greeting */}
 					<Fade delay={500} triggerOnce>
-						<GradientText
-							fontSize={{
-								lg: "3em",
-								md: "2em",
-								sm: "2em",
-								xs: "2em"
-							}}
-							sx={{
-								fontWeight: 200
-							}}
-						>
-							Hi!
-						</GradientText>
+						{themeMode === "dark" ? (
+							<Typography
+								fontSize={{
+									lg: "3em",
+									md: "2em",
+									sm: "2em",
+									xs: "2em"
+								}}
+								sx={{
+									fontWeight: 100,
+									color: "white"
+								}}
+							>
+								Hi!
+							</Typography>
+						) : (
+							<GradientText
+								fontSize={{
+									lg: "3em",
+									md: "2em",
+									sm: "2em",
+									xs: "2em"
+								}}
+								sx={{
+									fontWeight: 100
+								}}
+							>
+								Hi!
+							</GradientText>
+						)}
 					</Fade>
 
 					<Fade delay={500} triggerOnce>
-						<GradientText
-							fontSize={{
-								lg: "2.5em",
-								md: "2em",
-								sm: "2em",
-								xs: "2em"
-							}}
-							sx={{
-								fontWeight: 200
-							}}
-						>
-							{"I'm Jason :)"}
-						</GradientText>
+						{themeMode === "dark" ? (
+							<Typography
+								fontSize={{
+									lg: "3em",
+									md: "2em",
+									sm: "2em",
+									xs: "2em"
+								}}
+								sx={{
+									fontWeight: 100,
+									color: "white"
+								}}
+							>
+								{"I'm Jason :)"}
+							</Typography>
+						) : (
+							<GradientText
+								fontSize={{
+									lg: "3em",
+									md: "2em",
+									sm: "2em",
+									xs: "2em"
+								}}
+								sx={{
+									fontWeight: 100
+								}}
+							>
+								{"I'm Jason :)"}
+							</GradientText>
+						)}
 					</Fade>
 				</Slide>
 			</Stack>
+			<br />
 			{/* View Projects Button */}
 			<Fade delay={500} triggerOnce>
-				<IconButton size='small'>
-					<a
-						href='#projects'
-						style={{
+				<IconButton size='small' href='#projects' className='bounce'>
+					<KeyboardArrowDownIcon
+						sx={{
 							color: `${theme.text}`
 						}}
-					>
-						<KeyboardArrowDownIcon />
-					</a>
+					/>
 				</IconButton>
 			</Fade>
 		</Stack>
 	);
 }
 
-export default About;
+export default AboutSection;

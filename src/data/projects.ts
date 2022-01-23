@@ -12,7 +12,7 @@ export const projects: Project[] = [
 		desc: "Recreated own version of the official codenames.game. First time using Firebase Database.",
 		github: "https://github.com/Jason0429/my-codenames",
 		website: "https://jason0429.github.io/my-codenames/",
-		languages: ["ReactJS", "HTML/SCSS", "Firebase"]
+		languages: ["ReactJS", "HTML", "(S)CSS", "Firebase"]
 	},
 	{
 		title: "Battleship",

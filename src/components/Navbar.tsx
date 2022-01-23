@@ -29,7 +29,7 @@ function Navbar({
 			elevation={0}
 			sx={{
 				zIndex: 101,
-				borderRadius: "10px",
+				borderRadius: "5px",
 				position: "fixed",
 				boxSizing: "border-box",
 				padding: "10px",
@@ -39,12 +39,13 @@ function Navbar({
 				left: `${width >= 768 ? "" : "50%"}`,
 				transform: "translate(-50%, -50%)",
 				background: `${theme.paperBackground}`,
+				width: `${width >= 768 ? "auto" : "90%"}`,
 				transition: "background 0.2s ease-in-out"
 			}}
 		>
 			<Stack
 				direction={width >= 768 ? "column" : "row"}
-				spacing={3}
+				spacing={5}
 				sx={{
 					alignItems: "center",
 					justifyContent: "center",
@@ -92,17 +93,17 @@ function Navbar({
 					</IconButton>
 				</Tooltip>
 				<Tooltip title='Resume'>
-					<IconButton size='small'>
-						<a
-							href={resume}
-							rel='noopener noreferrer'
-							target='_blank'
-							style={{
+					<IconButton
+						size='small'
+						href={resume}
+						rel='noopener noreferrer'
+						target='_blank'
+					>
+						<DescriptionIcon
+							sx={{
 								color: `${theme.text}`
 							}}
-						>
-							<DescriptionIcon />
-						</a>
+						/>
 					</IconButton>
 				</Tooltip>
 			</Stack>
