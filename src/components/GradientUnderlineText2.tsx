@@ -3,7 +3,7 @@ import { Typography, Stack } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
 
-function GradientUnderlineText({
+function GradientUnderlineText2({
 	text,
 	fontSize,
 	sx,
@@ -33,4 +33,4 @@ function GradientUnderlineText({
 	);
 }
 
-export default GradientUnderlineText;
+export default GradientUnderlineText2;

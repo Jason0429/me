@@ -13,16 +13,12 @@ import { Stack } from "@mui/material";
 import { projects } from "../data/projects";
 
 function ProjectsSection({ theme }: { theme: any }) {
-	// const [width, height] = useWindowSize();
-
 	return (
 		<Stack
 			id='projects'
 			direction='column'
 			sx={{
 				minHeight: "100vh"
-				// alignItems: "center",
-				// justifyContent: "center"
 			}}
 		>
 			{/* My Project title */}
@@ -32,8 +28,6 @@ function ProjectsSection({ theme }: { theme: any }) {
 					width: "100%",
 					padding: "20px 0",
 					justifyContent: "center"
-					// border: "thin solid black",
-					// justifyContent: `${width >= 768 ? "" : "center"}`
 				}}
 			>
 				<GradientUnderlineText

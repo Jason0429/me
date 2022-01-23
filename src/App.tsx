@@ -4,20 +4,22 @@ import { useState, useEffect } from "react";
 // Components
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
+import Navbar from "./components/Navbar";
 
 // Material
 import { Stack } from "@mui/material";
 import Wave from "react-wavify";
-// import { ThemeProvider } from "@mui/material/styles";
 import { themes } from "./styles/theme";
-// import { useTheme } from "@mui/styles";
+
+// Hooks
+import { useWindowSize } from "./hooks";
 
 function App() {
-	// const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") || false);
 	const [themeMode, setThemeMode] = useState<string>(
 		localStorage.getItem("themeMode") || "light"
 	);
 	const [theme, setTheme] = useState<any>(themes[themeMode]);
+	const [width] = useWindowSize();
 
 	/**
 	 * Change the theme object
@@ -27,6 +29,9 @@ function App() {
 		setTheme(themes[themeMode]);
 	}, [themeMode]);
 
+	/**
+	 * Toggles theme and updates local storage.
+	 */
 	function toggleTheme() {
 		if (themeMode === "light") {
 			setThemeMode("dark");
@@ -41,9 +46,12 @@ function App() {
 		<Stack
 			direction='column'
 			sx={{
-				background: `${theme.background}`
+				background: `${theme.background}`,
+				transition: "background 0.2s ease-in-out"
 			}}
 		>
+			{/* Navbar */}
+			<Navbar theme={theme} themeMode={themeMode} toggleTheme={toggleTheme} />
 			{/* Wave */}
 			<Wave
 				style={{
@@ -51,10 +59,11 @@ function App() {
 					bottom: 0,
 					left: 0,
 					width: "100%",
-					height: "10%",
-					zIndex: 2,
+					height: `${width >= 768 ? "10%" : "15%"}`,
+					zIndex: 100,
 					padding: 0,
-					margin: 0
+					margin: 0,
+					transition: "background 0.2s ease-in-out"
 				}}
 				fill={theme.waveFill}
 				paused={false}
@@ -66,7 +75,7 @@ function App() {
 				}}
 			/>
 			{/* About Section */}
-			<AboutSection toggleTheme={toggleTheme} theme={theme} />
+			<AboutSection theme={theme} />
 
 			{/* Projects Section */}
 			<ProjectsSection theme={theme} />

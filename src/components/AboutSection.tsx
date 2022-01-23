@@ -12,7 +12,7 @@ import { Slide, Fade } from "react-awesome-reveal";
 // Data
 import pfp from "../imgs/pfp.png";
 
-function About({ theme, toggleTheme }: { theme: any; toggleTheme: () => void }) {
+function About({ theme }: { theme: any }) {
 	return (
 		<Stack
 			direction='column'
@@ -27,7 +27,6 @@ function About({ theme, toggleTheme }: { theme: any; toggleTheme: () => void }) 
 				spacing={0}
 				sx={{
 					alignItems: "center"
-					// border: "thin solid black"
 				}}
 			>
 				{/* Profile Pic */}
@@ -41,7 +40,8 @@ function About({ theme, toggleTheme }: { theme: any; toggleTheme: () => void }) 
 								height: "250px",
 								width: "250px",
 								padding: "10px",
-								background: `${theme.paperBackground}`
+								background: `${theme.paperBackground}`,
+								transition: "background 0.2s ease-in-out"
 							}}
 						>
 							<AboutProfilePic src={pfp} />
@@ -54,8 +54,9 @@ function About({ theme, toggleTheme }: { theme: any; toggleTheme: () => void }) 
 						<GradientText
 							fontSize={{
 								lg: "3em",
-								md: "2.5em",
-								sm: "2em"
+								md: "2em",
+								sm: "2em",
+								xs: "2em"
 							}}
 							sx={{
 								fontWeight: 200
@@ -69,8 +70,9 @@ function About({ theme, toggleTheme }: { theme: any; toggleTheme: () => void }) 
 						<GradientText
 							fontSize={{
 								lg: "2.5em",
-								md: "2.2em",
-								sm: "2em"
+								md: "2em",
+								sm: "2em",
+								xs: "2em"
 							}}
 							sx={{
 								fontWeight: 200
