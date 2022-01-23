@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// React
+import { useState, useEffect } from "react";
+
+// Components
+import AboutSection from "./components/AboutSection";
+import ProjectsSection from "./components/ProjectsSection";
+
+// Material
+import { Stack } from "@mui/material";
+import Wave from "react-wavify";
+// import { ThemeProvider } from "@mui/material/styles";
+import { themes } from "./styles/theme";
+// import { useTheme } from "@mui/styles";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") || false);
+	const [themeMode, setThemeMode] = useState<string>(
+		localStorage.getItem("themeMode") || "light"
+	);
+	const [theme, setTheme] = useState<any>(themes[themeMode]);
+
+	/**
+	 * Change the theme object
+	 * every time themeMode changes.
+	 */
+	useEffect(() => {
+		setTheme(themes[themeMode]);
+	}, [themeMode]);
+
+	function toggleTheme() {
+		if (themeMode === "light") {
+			setThemeMode("dark");
+			localStorage.setItem("themeMode", "dark");
+		} else {
+			setThemeMode("light");
+			localStorage.setItem("themeMode", "light");
+		}
+	}
+
+	return (
+		<Stack
+			direction='column'
+			sx={{
+				background: `${theme.background}`
+			}}
+		>
+			{/* Wave */}
+			<Wave
+				style={{
+					position: "fixed",
+					bottom: 0,
+					left: 0,
+					width: "100%",
+					height: "10%",
+					zIndex: 2,
+					padding: 0,
+					margin: 0
+				}}
+				fill={theme.waveFill}
+				paused={false}
+				options={{
+					height: 20,
+					amplitude: 50,
+					speed: 0.2,
+					points: 5
+				}}
+			/>
+			{/* About Section */}
+			<AboutSection toggleTheme={toggleTheme} theme={theme} />
+
+			{/* Projects Section */}
+			<ProjectsSection theme={theme} />
+		</Stack>
+	);
 }
 
 export default App;
