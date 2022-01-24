@@ -23,6 +23,7 @@ function GradientUnderlineText2({
 		border-radius: 5px;
 		width: 100%;
 	`;
+
 	return (
 		<Stack direction='column' spacing={0}>
 			<Typography sx={sx} fontSize={fontSize}>

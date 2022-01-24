@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 // Styles
 import { GradientText } from "../styles/ProjectsSection.styles";
+import { Fade } from "react-awesome-reveal";
 
 // Material
 import { Stack, Typography } from "@mui/material";
@@ -81,8 +82,6 @@ function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }
 				direction='row'
 				sx={{
 					justifyContent: "center"
-					// alignItems: "center",
-					// border: "thin solid black"
 				}}
 			>
 				<Stack
@@ -96,9 +95,11 @@ function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }
 						// border: "thin solid black"
 					}}
 				>
-					{projects.map((p, key) => (
-						<ProjectCard project={p} theme={theme} key={key} />
-					))}
+					<Fade cascade triggerOnce>
+						{projects.map((p, key) => (
+							<ProjectCard project={p} theme={theme} key={key} />
+						))}
+					</Fade>
 				</Stack>
 			</Stack>
 		</Stack>
