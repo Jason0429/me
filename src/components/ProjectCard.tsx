@@ -21,7 +21,8 @@ function ProjectCard({ project, theme }: { project: Project; theme: any }) {
 				padding: 2,
 				height: "250px",
 				width: "250px",
-				background: `${theme.paperBackground}`
+				background: `${theme.paperBackground}`,
+				transition: "background 0.2s ease-in-out"
 			}}
 		>
 			<Stack direction='column' spacing={1}>
