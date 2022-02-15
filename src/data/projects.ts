@@ -28,6 +28,12 @@ export const projects: Project[] = [
 		languages: ["Python"]
 	},
 	{
+		title: "Artful Skins",
+		desc: "Social media app prototype designed to connect tattoo artists and promote their businesses.",
+		website: "https://invis.io/3QYFQI4VWPM",
+		languages: ["Figma", "Whimsical", "inVision"]
+	},
+	{
 		title: "Two-Layer TicTacToe",
 		desc: "A slightly more difficult version of traditional TicTacToe played against a computer that predicts your next move.",
 		github: "https://github.com/Jason0429/two-layer-tic-tac-toe",
@@ -39,12 +45,6 @@ export const projects: Project[] = [
 		desc: "School Java project that keeps track of classes, assignments, and student grades.",
 		github: "https://github.com/Jason0429/grade-tracker-javafx",
 		languages: ["Java", "JavaFX GUI"]
-	},
-	{
-		title: "Connect",
-		desc: "Prototype of an app to help teachers understand how to fully utilize learning platforms to provide efficient learning experiences for students.",
-		website:
-			"https://docs.google.com/presentation/d/1BaPfNKCXhdAghWnfqmuG6TBs4o2miL_2L_6gdqNSMpU/edit?usp=sharing"
 	},
 	{
 		title: "SupplyOrb",
