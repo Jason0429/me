@@ -55,8 +55,8 @@ export const projects: Project[] = [
 	{
 		title: "Workout Tracker",
 		desc: "User logs into their Google accounts and can create workout templates and log workouts.",
-		github: "https://github.com/Jason0429/react-workout-tracker",
-		website: "https://jason0429.github.io/react-workout-tracker",
-		languages: ["ReactJS", "Firestore"]
+		github: "https://github.com/Jason0429/workout-tracker",
+		website: "https://jason0429.github.io/workout-tracker",
+		languages: ["TypeScript", "React", "Firestore"]
 	}
 ];
