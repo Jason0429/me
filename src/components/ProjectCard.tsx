@@ -1,17 +1,11 @@
 // Material
 import { Stack, Paper, Typography, IconButton, Tooltip, Chip } from "@mui/material";
 import { GitHub, Web } from "@mui/icons-material";
+import { Project } from "../data/projects";
+import DownloadIcon from "@mui/icons-material/Download";
 
 // Component
 import GradientUnderlineText from "./GradientUnderlineText2";
-
-interface Project {
-	title?: string;
-	desc?: string;
-	github?: string;
-	website?: string;
-	languages?: string[];
-}
 
 function ProjectCard({ project, theme }: { project: Project; theme: any }) {
 	return (
@@ -59,6 +53,17 @@ function ProjectCard({ project, theme }: { project: Project; theme: any }) {
 						maxWidth: "100%"
 					}}
 				>
+					{project.download && (
+						<Tooltip title='Download Code'>
+							<IconButton href={project.download} data-tip='Download Code'>
+								<DownloadIcon
+									sx={{
+										color: `${theme.text}`
+									}}
+								/>
+							</IconButton>
+						</Tooltip>
+					)}
 					{project.github && (
 						<Tooltip title='GitHub'>
 							<IconButton href={project.github} target='_blank' data-tip='See Code'>

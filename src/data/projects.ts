@@ -1,8 +1,11 @@
-type Project = {
+import imageProcessingZip from "../projectzips/imageprocessing.zip";
+
+export type Project = {
 	title?: string;
 	desc?: string;
 	github?: string;
 	website?: string;
+	download?: string;
 	languages?: string[];
 };
 
@@ -46,17 +49,23 @@ export const projects: Project[] = [
 		github: "https://github.com/Jason0429/grade-tracker-javafx",
 		languages: ["Java", "JavaFX GUI"]
 	},
-	{
-		title: "SupplyOrb",
-		desc: "Prototype of a platform aimed for a more ethical and sustainable future using blockchain.",
-		website:
-			"https://docs.google.com/presentation/d/1yCOZeXWucWGnGoJr4Wbwu72x-6VuRgdp/edit?usp=sharing&ouid=110437001760350789206&rtpof=true&sd=true"
-	},
+	// {
+	// 	title: "SupplyOrb",
+	// 	desc: "Prototype of a platform aimed for a more ethical and sustainable future using blockchain.",
+	// 	website:
+	// 		"https://docs.google.com/presentation/d/1yCOZeXWucWGnGoJr4Wbwu72x-6VuRgdp/edit?usp=sharing&ouid=110437001760350789206&rtpof=true&sd=true"
+	// },
 	{
 		title: "Workout Tracker",
 		desc: "User logs into their Google accounts and can create workout templates and log workouts.",
 		github: "https://github.com/Jason0429/workout-tracker",
 		website: "https://jason0429.github.io/workout-tracker",
 		languages: ["TypeScript", "React", "Firestore"]
+	},
+	{
+		title: "Image Processing",
+		desc: "An image processing MVC application that supports text-based and GUI-based user interfaces.",
+		download: imageProcessingZip,
+		languages: ["Java", "Swing"]
 	}
 ];
