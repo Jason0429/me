@@ -43,12 +43,12 @@ export const projects: Project[] = [
 		website: "https://jason0429.github.io/two-layer-tic-tac-toe/",
 		languages: ["HTML", "CSS", "JavaScript"]
 	},
-	{
-		title: "Grade Tracker",
-		desc: "School Java project that keeps track of classes, assignments, and student grades.",
-		github: "https://github.com/Jason0429/grade-tracker-javafx",
-		languages: ["Java", "JavaFX GUI"]
-	},
+	// {
+	// 	title: "Grade Tracker",
+	// 	desc: "School Java project that keeps track of classes, assignments, and student grades.",
+	// 	github: "https://github.com/Jason0429/grade-tracker-javafx",
+	// 	languages: ["Java", "JavaFX GUI"]
+	// },
 	// {
 	// 	title: "SupplyOrb",
 	// 	desc: "Prototype of a platform aimed for a more ethical and sustainable future using blockchain.",
@@ -67,5 +67,11 @@ export const projects: Project[] = [
 		desc: "An image processing MVC application that supports text-based and GUI-based user interfaces.",
 		download: imageProcessingZip,
 		languages: ["Java", "Swing"]
+	},
+	{
+		title: "Decor Finishes",
+		desc: "A contracting company website for a client with a contact form page.",
+		website: "https://decorfinishes.vercel.app",
+		languages: ["Next", "EmailJS"]
 	}
 ];
