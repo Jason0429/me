@@ -1,32 +1,32 @@
 // Components
 
 // Material
-import { Stack, Paper, IconButton, Typography } from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Stack, Paper, IconButton, Typography } from '@mui/material';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 // Styles
-import { AboutProfilePic, GradientText } from "../styles/About.styles";
-import { Slide, Fade } from "react-awesome-reveal";
-import "../styles/animations.css";
+import { AboutProfilePic, GradientText, AboutProfilePicWrapper } from '../styles/About.styles';
+import { Slide, Fade } from 'react-awesome-reveal';
+import '../styles/animations.css';
 
 // Data
-import pfp from "../imgs/pfp.png";
+import pfp from '../imgs/pfp_new.jpg';
 
 function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 	return (
 		<Stack
 			direction='column'
 			sx={{
-				height: "100vh",
-				justifyContent: "center",
-				alignItems: "center"
+				height: '100vh',
+				justifyContent: 'center',
+				alignItems: 'center'
 			}}
 		>
 			<Stack
 				direction='column'
 				spacing={0}
 				sx={{
-					alignItems: "center"
+					alignItems: 'center'
 				}}
 			>
 				{/* Profile Pic */}
@@ -36,32 +36,34 @@ function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 							elevation={0}
 							variant='outlined'
 							sx={{
-								borderRadius: "100%",
-								height: "250px",
-								width: "250px",
-								padding: "10px",
+								borderRadius: '100%',
+								height: '250px',
+								width: '250px',
+								padding: '10px',
 								background: `${theme.paperBackground}`,
-								transition: "background 0.2s ease-in-out"
+								transition: 'background 0.2s ease-in-out'
 							}}
 						>
-							<AboutProfilePic src={pfp} />
+							<AboutProfilePicWrapper>
+								<AboutProfilePic src={pfp} />
+							</AboutProfilePicWrapper>
 						</Paper>
 					</Fade>
 					<br />
 
 					{/* Greeting */}
 					<Fade delay={500} triggerOnce>
-						{themeMode === "dark" ? (
+						{themeMode === 'dark' ? (
 							<Typography
 								fontSize={{
-									lg: "3em",
-									md: "2em",
-									sm: "2em",
-									xs: "2em"
+									lg: '3em',
+									md: '2em',
+									sm: '2em',
+									xs: '2em'
 								}}
 								sx={{
 									fontWeight: 100,
-									color: "white"
+									color: 'white'
 								}}
 							>
 								Hi!
@@ -69,10 +71,10 @@ function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 						) : (
 							<GradientText
 								fontSize={{
-									lg: "3em",
-									md: "2em",
-									sm: "2em",
-									xs: "2em"
+									lg: '3em',
+									md: '2em',
+									sm: '2em',
+									xs: '2em'
 								}}
 								sx={{
 									fontWeight: 100
@@ -84,17 +86,17 @@ function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 					</Fade>
 
 					<Fade delay={500} triggerOnce>
-						{themeMode === "dark" ? (
+						{themeMode === 'dark' ? (
 							<Typography
 								fontSize={{
-									lg: "3em",
-									md: "2em",
-									sm: "2em",
-									xs: "2em"
+									lg: '3em',
+									md: '2em',
+									sm: '2em',
+									xs: '2em'
 								}}
 								sx={{
 									fontWeight: 100,
-									color: "white"
+									color: 'white'
 								}}
 							>
 								{"I'm Jason :)"}
@@ -102,10 +104,10 @@ function AboutSection({ theme, themeMode }: { theme: any; themeMode: string }) {
 						) : (
 							<GradientText
 								fontSize={{
-									lg: "3em",
-									md: "2em",
-									sm: "2em",
-									xs: "2em"
+									lg: '3em',
+									md: '2em',
+									sm: '2em',
+									xs: '2em'
 								}}
 								sx={{
 									fontWeight: 100

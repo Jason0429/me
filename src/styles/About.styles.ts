@@ -1,10 +1,19 @@
-import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
-export const AboutProfilePic = styled("img")`
+export const AboutProfilePicWrapper = styled('div')`
 	height: 250px;
 	width: 250px;
+	overflow: hidden;
 	border-radius: 100%;
+`;
+
+export const AboutProfilePic = styled('img')`
+	height: 100%;
+	width: 100%;
+
+	transform: scale(1.5);
+	object-position: bottom;
 `;
 
 export const GradientText = styled(Typography)`
