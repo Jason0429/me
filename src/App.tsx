@@ -1,23 +1,21 @@
 // React
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // Components
-import AboutSection from "./components/AboutSection";
-import ProjectsSection from "./components/ProjectsSection";
-import Navbar from "./components/Navbar";
+import AboutSection from './components/AboutSection';
+import ProjectsSection from './components/ProjectsSection';
+import Navbar from './components/Navbar';
 
 // Material
-import { Stack } from "@mui/material";
-import Wave from "react-wavify";
-import { themes } from "./styles/theme";
+import { Stack } from '@mui/material';
+import Wave from 'react-wavify';
+import { themes } from './styles/theme';
 
 // Hooks
-import { useWindowSize } from "./hooks";
+import { useWindowSize } from './hooks';
 
 function App() {
-	const [themeMode, setThemeMode] = useState<string>(
-		localStorage.getItem("themeMode") || "light"
-	);
+	const [themeMode, setThemeMode] = useState<string>(localStorage.getItem('themeMode') || 'light');
 	const [theme, setTheme] = useState<any>(themes[themeMode]);
 	const [width] = useWindowSize();
 
@@ -33,12 +31,12 @@ function App() {
 	 * Toggles theme and updates local storage.
 	 */
 	function toggleTheme() {
-		if (themeMode === "light") {
-			setThemeMode("dark");
-			localStorage.setItem("themeMode", "dark");
+		if (themeMode === 'light') {
+			setThemeMode('dark');
+			localStorage.setItem('themeMode', 'dark');
 		} else {
-			setThemeMode("light");
-			localStorage.setItem("themeMode", "light");
+			setThemeMode('light');
+			localStorage.setItem('themeMode', 'light');
 		}
 	}
 
@@ -47,7 +45,7 @@ function App() {
 			direction='column'
 			sx={{
 				background: `${theme.background}`,
-				transition: "background 0.2s ease-in-out"
+				transition: 'background 0.2s ease-in-out'
 			}}
 		>
 			{/* Navbar */}
@@ -55,15 +53,15 @@ function App() {
 			{/* Wave */}
 			<Wave
 				style={{
-					position: "fixed",
+					position: 'fixed',
 					bottom: 0,
 					left: 0,
-					width: "100%",
-					height: `${width >= 768 ? "10%" : "15%"}`,
+					width: '100%',
+					height: `${width >= 768 ? '10%' : '15%'}`,
 					zIndex: 100,
 					padding: 0,
 					margin: 0,
-					transition: "all 0.2s ease-in-out"
+					transition: 'all 0.2s ease-in-out'
 				}}
 				fill={theme.waveFill}
 				paused={false}

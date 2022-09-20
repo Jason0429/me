@@ -1,38 +1,39 @@
 // Components
-import ProjectCard from "./ProjectCard";
+import ProjectCard from './ProjectCard';
 // import GradientUnderlineText from "./GradientUnderlineText";
 
 // Styles
-import { GradientText } from "../styles/ProjectsSection.styles";
-import { Fade } from "react-awesome-reveal";
+import { GradientText } from '../styles/ProjectsSection.styles';
+import { Fade } from 'react-awesome-reveal';
 
 // Material
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography } from '@mui/material';
 
 // Hooks
-import { useWindowSize } from "../hooks";
+import { useWindowSize } from '../hooks';
 
 // Data
-import { projects } from "../data/projects";
+import { projects } from '../data/projects';
 
 function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }) {
-	const [width] = useWindowSize();
+	// const [width] = useWindowSize();
+
 	return (
 		<Stack
 			id='projects'
 			direction='column'
 			sx={{
-				minHeight: "100vh",
-				paddingBottom: `${width >= 768 ? "0" : "30vh"}`
+				minHeight: '100vh',
+				paddingBottom: '30vh'
 			}}
 		>
 			{/* My Project title */}
 			<Stack
 				direction='row'
 				sx={{
-					width: "100%",
-					padding: "20px 0",
-					justifyContent: "center"
+					width: '100%',
+					padding: '20px 0',
+					justifyContent: 'center'
 				}}
 			>
 				{/* <GradientUnderlineText
@@ -48,13 +49,13 @@ function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }
 						color: `${theme.text}`
 					}}
 				/> */}
-				{themeMode === "dark" ? (
+				{themeMode === 'dark' ? (
 					<Typography
 						fontSize={{
-							lg: "3em",
-							md: "2.5em",
-							sm: "2em",
-							xs: "2em"
+							lg: '3em',
+							md: '2.5em',
+							sm: '2em',
+							xs: '2em'
 						}}
 						sx={{ fontWeight: 100, color: `${theme.text}` }}
 					>
@@ -63,10 +64,10 @@ function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }
 				) : (
 					<GradientText
 						fontSize={{
-							lg: "3em",
-							md: "2.5em",
-							sm: "2em",
-							xs: "2em"
+							lg: '3em',
+							md: '2.5em',
+							sm: '2em',
+							xs: '2em'
 						}}
 						sx={{
 							fontWeight: 100
@@ -81,17 +82,17 @@ function ProjectsSection({ theme, themeMode }: { theme: any; themeMode: string }
 			<Stack
 				direction='row'
 				sx={{
-					justifyContent: "center"
+					justifyContent: 'center'
 				}}
 			>
 				<Stack
 					direction='row'
 					sx={{
-						width: "80%",
-						flexWrap: "wrap",
+						width: '80%',
+						flexWrap: 'wrap',
 						gap: 2,
-						alignItems: "center",
-						justifyContent: "center"
+						alignItems: 'center',
+						justifyContent: 'center'
 						// border: "thin solid black"
 					}}
 				>
