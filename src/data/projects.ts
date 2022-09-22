@@ -17,7 +17,7 @@ export const projects: Project[] = [
 		desc: 'Recreated own version of the official codenames.game. First time using Firebase Database.',
 		github: 'https://github.com/Jason0429/my-codenames',
 		website: 'https://jason0429.github.io/my-codenames/',
-		languages: ['ReactJS', 'HTML', '(S)CSS', 'Firebase']
+		languages: ['React', 'JavaScript', 'Firebase Realtime Database']
 	},
 	{
 		title: 'Battleship',
@@ -27,16 +27,23 @@ export const projects: Project[] = [
 		languages: ['HTML', 'CSS', 'JavaScript']
 	},
 	{
+		title: 'Workout Tracker',
+		desc: 'Web app to keep track of user workouts, templates, and exercises with Google authentication.',
+		github: 'https://github.com/Jason0429/workout-tracker',
+		website: 'https://jason0429.github.io/workout-tracker',
+		languages: ['React', 'TypeScript', 'Firebase']
+	},
+	{
+		title: 'Image Processing',
+		desc: 'Text and GUI-based program based on MVC/OOD principles. Features include: flipping, greyscaling, downscaling, partial image manipulation and more.',
+		download: imageProcessingZip,
+		languages: ['Java', 'Swing']
+	},
+	{
 		title: 'Billion Oyster Project',
 		desc: 'Learned introduction to Data Science using Python. Used real billion-oyster data.',
 		github: 'https://github.com/Jason0429/billion-oyster-project/blob/master/presentation.py',
 		languages: ['Python']
-	},
-	{
-		title: 'Artful Skins',
-		desc: 'Social media app prototype designed to connect tattoo artists and promote their businesses.',
-		website: 'https://invis.io/3QYFQI4VWPM',
-		languages: ['Figma', 'Whimsical', 'inVision']
 	},
 	{
 		title: 'Two-Layer TicTacToe',
@@ -58,13 +65,6 @@ export const projects: Project[] = [
 	// 		"https://docs.google.com/presentation/d/1yCOZeXWucWGnGoJr4Wbwu72x-6VuRgdp/edit?usp=sharing&ouid=110437001760350789206&rtpof=true&sd=true"
 	// },
 	{
-		title: 'Workout Tracker',
-		desc: 'Web app to keep track of user workouts, templates, and exercises with Google authentication.',
-		github: 'https://github.com/Jason0429/workout-tracker',
-		website: 'https://jason0429.github.io/workout-tracker',
-		languages: ['TypeScript', 'React', 'Firebase']
-	},
-	{
 		title: 'Maze Path Finder',
 		desc: "Uses Kruskal's algorithm to randomly generate mazes and solves path using either Breadth or Depth First Search. ",
 		download: mazePathFinderZip,
@@ -76,16 +76,17 @@ export const projects: Project[] = [
 		download: marbleSolitaireZip,
 		languages: ['Java']
 	},
-	{
-		title: 'Image Processing',
-		desc: 'Text and GUI-based program based on MVC/OOD principles. Features include: flipping, greyscaling, downscaling, partial image manipulation and more.',
-		download: imageProcessingZip,
-		languages: ['Java', 'Swing']
-	},
+
 	{
 		title: 'Decor Finishes',
 		desc: 'A contracting company website for a client with a contact form page.',
 		website: 'https://decorfinishes.vercel.app',
 		languages: ['Next', 'EmailJS']
+	},
+	{
+		title: 'Artful Skins',
+		desc: 'Social media app prototype designed to connect tattoo artists and promote their businesses.',
+		website: 'https://invis.io/3QYFQI4VWPM',
+		languages: ['Figma', 'Whimsical', 'inVision']
 	}
 ];
