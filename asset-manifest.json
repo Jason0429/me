@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.f2beca2a.css",
-    "main.js": "/static/js/main.000f9c90.js",
+    "main.js": "/static/js/main.c77cbb6e.js",
     "static/js/787.9fb8489a.chunk.js": "/static/js/787.9fb8489a.chunk.js",
     "static/media/pfp_new.jpg": "/static/media/pfp_new.3e6c1df9ec57d64916fa.jpg",
     "static/media/imageprocessing.zip": "/static/media/imageprocessing.b3073e04898d10d951e1.zip",
     "static/media/mazepathfinder.zip": "/static/media/mazepathfinder.412b916b021187e08452.zip",
-    "static/media/resume.pdf": "/static/media/resume.3e78fad14021567625ae.pdf",
+    "static/media/resume.pdf": "/static/media/resume.e4aaf5ec5ca2216524d5.pdf",
     "static/media/marblesolitaire.zip": "/static/media/marblesolitaire.896164cd0f579c7e762d.zip",
     "index.html": "/index.html",
     "main.f2beca2a.css.map": "/static/css/main.f2beca2a.css.map",
-    "main.000f9c90.js.map": "/static/js/main.000f9c90.js.map",
+    "main.c77cbb6e.js.map": "/static/js/main.c77cbb6e.js.map",
     "787.9fb8489a.chunk.js.map": "/static/js/787.9fb8489a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2beca2a.css",
-    "static/js/main.000f9c90.js"
+    "static/js/main.c77cbb6e.js"
   ]
 }
